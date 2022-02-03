@@ -4,17 +4,18 @@ let swatchSize = 400
 
 
 function setup() {
-  createCanvas(400, 400);
-  frameRate(1);
-  
-  RCR1 = int(random(0,255))
-  RCG1 = int(random(0,255))
-  RCB1 = int(random(0,255))
+  let cnv = createCanvas(400, 400);
+  frameRate(1.25); //staggers generation
+
+  cnv.mousePressed(resetSketch);
+
+  RCR1 = int(random(0,150))
+  RCG1 = int(random(0,150))
+  RCB1 = int(random(0,150))
   
   RCR2 = int(random(0,255))
   RCG2 = int(random(0,255))
   RCB2 = int(random(0,255))
-  
 }
 
 function draw() {
@@ -49,7 +50,6 @@ function draw() {
 
     }
   }
-
 }
 
 class Pattern {
@@ -108,4 +108,14 @@ class Pattern {
       vertex(this.x, this.y);                               
     endShape();
   }
+}
+
+function resetSketch(){
+  RCR1 = int(random(0,150))
+  RCG1 = int(random(0,150))
+  RCB1 = int(random(0,150))
+  
+  RCR2 = int(random(0,255))
+  RCG2 = int(random(0,255))
+  RCB2 = int(random(0,255))
 }
