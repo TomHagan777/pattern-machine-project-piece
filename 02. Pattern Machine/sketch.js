@@ -5,7 +5,7 @@ let swatchSize = 400
 
 function setup() {
   let cnv = createCanvas(400, 400);
-  frameRate(1.25); //staggers generation
+  frameRate(1); //staggers generation
 
   cnv.mousePressed(resetSketch);
 
