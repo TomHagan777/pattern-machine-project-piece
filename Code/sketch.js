@@ -48,9 +48,9 @@ function setup() {
   RCB2 = int(random(0,255))
 
   //Pattern Machine 02 ¬
-  RCR3 = int(random(0,255))
-  RCG3 = int(random(0,255))
-  RCB3 = int(random(0,255))
+  RCR3 = int(random(0,200))
+  RCG3 = int(random(0,200))
+  RCB3 = int(random(0,200))
   
   RCR4 = int(random(0,255))
   RCG4 = int(random(0,255))
@@ -223,9 +223,9 @@ function resetSketch(){
   RCG2 = int(random(0,255))
   RCB2 = int(random(0,255))
 
-  RCR3 = int(random(0,255))
-  RCG3 = int(random(0,255))
-  RCB3 = int(random(0,255))
+  RCR3 = int(random(0,200))
+  RCG3 = int(random(0,200))
+  RCB3 = int(random(0,200))
   
   RCR4 = int(random(0,255))
   RCG4 = int(random(0,255))
