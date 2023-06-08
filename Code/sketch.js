@@ -1,6 +1,7 @@
 let pattern = [];    //main pattern array
 let grid = 200;       
 let swatchSize = 400
+let darkness = 50;
 
 //Sound ¬ 
 let osc01, osc02, osc03, sub
@@ -21,7 +22,7 @@ function setup() {
 }
 
 function draw() {
-  
+
 
 //sound ¬ //////////////////////////////////////////////////////////////////////
   osc01.amp(vol);
@@ -104,21 +105,21 @@ function resetSketch(){
   osc03.start();
   sub.start();
 
-  RCR1 = int(random(0,255))
-  RCG1 = int(random(0,255))
-  RCB1 = int(random(0,255))
+  RCR1 = int(random(0,55))
+  RCG1 = int(random(0,55))
+  RCB1 = int(random(0,55))
   
-  RCR2 = int(random(0,255))
-  RCG2 = int(random(0,255))
-  RCB2 = int(random(0,255))
+  RCR2 = int(random(55,255))
+  RCG2 = int(random(55,255))
+  RCB2 = int(random(55,255))
 
-  RCR3 = int(random(0,255))
-  RCG3 = int(random(0,255))
-  RCB3 = int(random(0,255))
+  RCR3 = int(random(0,55))
+  RCG3 = int(random(0,55))
+  RCB3 = int(random(0,55))
   
-  RCR4 = int(random(0,255))
-  RCG4 = int(random(0,255))
-  RCB4 = int(random(0,255))
+  RCR4 = int(random(55,255))
+  RCG4 = int(random(55,255))
+  RCB4 = int(random(55,255))
 }
 
 function soundFunction(){
@@ -136,18 +137,19 @@ function touchStarted() {
 function generateNew() {
   background(220);
 
-  //set up for machines ¬ ///////////////////////////////////////////////////////
-  colour1 = color(RCR1,RCG1,RCB1,50);
-  colour2 = color(RCR2,RCG2,RCB2,50);
 
-  colour3 = color(RCR3,RCG3,RCB3,50);
-  colour4 = color(RCR4,RCG4,RCB4,50);
+  //set up for machines ¬ ///////////////////////////////////////////////////////
+  colour1 = color(RCR1,RCG1,RCB1,darkness);
+  colour2 = color(RCR2,RCG2,RCB2,255);
+
+  colour3 = color(RCR3,RCG3,RCB3,darkness);
+  colour4 = color(RCR4,RCG4,RCB4,255);
   
   let lerpA = lerpColor(colour1, colour2, 0.33);
   let lerpB = lerpColor(colour1, colour2, 0.66);
 
   let lerpC = lerpColor(colour3, colour4, 0.33);
-  let lerpD = lerpColor(colour4, colour4, 0.66);
+  let lerpD = lerpColor(colour3, colour4, 0.66);
 
   let centreReducer = swatchSize/2;
 
@@ -156,6 +158,26 @@ function generateNew() {
 
   let plotter2x = width/2+300;
   let plotter2y = height/2;
+
+//Colour Test
+// //Machine 1
+//   fill(colour1)
+//   rect(0+100,0,10,200);
+//   fill(lerpA)
+//   rect(200+100,0,10,200);
+//   fill(lerpB)
+//   rect(400+100,0,10,200);
+//   fill(colour2)
+//   rect(600+100,0,10,200);
+// // Machine 2
+//   fill(colour3)
+//   rect(width-100,0,10,200);
+//   fill(lerpC)
+//   rect(width-300,0,10,200);
+//   fill(lerpD)
+//   rect(width-500,0,10,200);
+//   fill(colour4)
+//   rect(width-700,0,10,200);
 
 //Machine 01 ¬ ///////////////////////////////////////////////////////////////////////
   fill(lerpB);
