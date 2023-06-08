@@ -9,52 +9,15 @@ let vol = 1;
 
 function setup() {
   let cnv = createCanvas(windowWidth, windowHeight);
-
+  resetSketch();
   cnv.mousePressed(resetSketch);
-
   rectMode(CENTER)
   noStroke();
-
-  osc01 = new p5.Oscillator('sine');
-  osc02 = new p5.Oscillator('sine');
-  osc03 = new p5.Oscillator('sine');
-  sub = new p5.Oscillator('sine');
-
-  osc01.freq(100);
-  osc02.freq(101);
-  osc03.freq(200);
-  sub.freq(50);
-
-  osc01.start();
-  osc02.start();
-  osc03.start();
-  sub.start();
-
+  setInterval(generateNew,  1000); //runs every second
   // soundButtonOn = createImg('Code/Volume Master.png', 'volume on');
   // soundButtonOn.position(width-120,height-60);
   // soundButtonOn.mousePressed(soundFunction);
   // soundButtonOn.style('width:60px;')
-
-  //Pattern Machine 01 ¬
-  RCR1 = int(random(0,150))
-  RCG1 = int(random(0,150))
-  RCB1 = int(random(0,150))
-  
-  RCR2 = int(random(0,255))
-  RCG2 = int(random(0,255))
-  RCB2 = int(random(0,255))
-
-  //Pattern Machine 02 ¬
-  RCR3 = int(random(0,200))
-  RCG3 = int(random(0,200))
-  RCB3 = int(random(0,200))
-  
-  RCR4 = int(random(0,255))
-  RCG4 = int(random(0,255))
-  RCB4 = int(random(0,255))
-
-
-  setInterval(generateNew,  1000); //runs every second
 }
 
 function draw() {
@@ -141,17 +104,17 @@ function resetSketch(){
   osc03.start();
   sub.start();
 
-  RCR1 = int(random(0,150))
-  RCG1 = int(random(0,150))
-  RCB1 = int(random(0,150))
+  RCR1 = int(random(0,255))
+  RCG1 = int(random(0,255))
+  RCB1 = int(random(0,255))
   
   RCR2 = int(random(0,255))
   RCG2 = int(random(0,255))
   RCB2 = int(random(0,255))
 
-  RCR3 = int(random(0,200))
-  RCG3 = int(random(0,200))
-  RCB3 = int(random(0,200))
+  RCR3 = int(random(0,255))
+  RCG3 = int(random(0,255))
+  RCB3 = int(random(0,255))
   
   RCR4 = int(random(0,255))
   RCG4 = int(random(0,255))
