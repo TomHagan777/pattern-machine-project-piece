@@ -22,8 +22,6 @@ function setup() {
 }
 
 function draw() {
-
-
 //sound ¬ //////////////////////////////////////////////////////////////////////
   osc01.amp(vol);
   osc02.amp(vol);
@@ -140,10 +138,10 @@ function generateNew() {
 
   //set up for machines ¬ ///////////////////////////////////////////////////////
   colour1 = color(RCR1,RCG1,RCB1,darkness);
-  colour2 = color(RCR2,RCG2,RCB2,255);
+  colour2 = color(RCR2,RCG2,RCB2,100);
 
   colour3 = color(RCR3,RCG3,RCB3,darkness);
-  colour4 = color(RCR4,RCG4,RCB4,255);
+  colour4 = color(RCR4,RCG4,RCB4,100);
   
   let lerpA = lerpColor(colour1, colour2, 0.33);
   let lerpB = lerpColor(colour1, colour2, 0.66);
